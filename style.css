@@ -1,0 +1,283 @@
+* {
+    font-family: "Montserrat";
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+#header, #footer {
+    padding: 16px 128px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#header h1 {
+    font-size: 48px;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 64px 128px;
+}
+
+p {
+    color: rgb(188, 188, 188);
+    font-size: 18px;
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+#landing p { /* All p inside .heading */
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#landing a {
+    margin-right: 12px;
+}
+
+.menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0;
+    display: flex; /* Use flexbox to align items horizontally */
+}
+
+.menu li {
+    font-size: 30px;
+}
+
+.menu li a {
+    background: linear-gradient(to bottom, rgb(255, 195, 82), rgb(136, 102, 0));
+    color: white;
+    padding: 5px 20px; 
+}
+
+.menu li a:hover {
+    background: #3e2600;
+}
+
+a:active, button:active {
+    text-decoration: underline;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.menu li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.menu li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid rgb(255, 195, 82);
+    color: black;
+    padding: 5px 10px;
+}
+
+.btn-alt {
+    background-color: rgb(255, 195, 82);
+    color: white;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+.about-contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 72px;
+}
+
+.about-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-items div {
+    width: 50px;
+    height: 10px;
+    background-color: rgb(255, 195, 82);
+    margin-bottom: 16px;
+}
+
+#service {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-header h1, .contact-header h1 {
+    position: relative;
+}
+
+.service-header h1::before, .contact-header h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("images/accent2.svg");
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: -1; /* send to back */
+}
+
+.service-contents {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 128px;
+}
+
+.service-items {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px #979797;
+}
+
+.service-items img {
+    height: 100%;
+    filter: grayscale(1);
+}
+
+.service-items p, .service-items h2 {
+    padding: 0px 16px;
+}
+
+.contact-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 72px;
+}
+
+.input-name {
+    grid-area: name;
+}
+
+.input-subject {
+    grid-area: subject;
+}
+
+.input-email {
+    grid-area: email;
+}
+
+.input-phone {
+    grid-area: phone;
+}
+
+.input-message {
+    grid-area: message;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(255, 195, 82);
+    padding: 32px 16px;
+}
+
+form h1 {
+    text-align: center;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 64px;
+    margin-top: 32px;
+    margin-bottom: 100px;
+    grid-template-areas: "name subject"
+                         "email phone"
+                         "message message";
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.input label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+form input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;    
+    font-size: 20px;
+}
+
+form input:focus {
+    border-bottom: 2px solid rgb(255, 195, 82);
+}
+
+form input::placeholder {
+    font-size: 16px;
+}
+
+#footer {
+    background-color: rgb(255, 195, 82);
+    color: white;
+}
+
+#footer p {
+    color: white;
+}
