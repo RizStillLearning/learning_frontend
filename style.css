@@ -210,7 +210,7 @@ button:hover {
 }
 
 .service-items:hover {
-    animation: zoomIn 0.5s;
+    animation: zoomIn 0.5s forwards;
 }
 
 .service-items img {
@@ -219,7 +219,7 @@ button:hover {
 }
 
 .service-items:hover img {
-    animation: coloring 0.5s;
+    animation: coloring 0.5s forwards;
 }
 
 .service-items p, .service-items h2 {
