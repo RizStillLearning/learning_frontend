@@ -14,15 +14,15 @@ h1 {
 
 #header, #footer {
     padding: 16px 128px;
+    box-sizing: border-box;
 }
 
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed; /* Change from sticky to fixed */
+    position: sticky;
     top: 0;
-    width: 100%; /* Ensure the header spans the entire width */
     background-color: white;
     z-index: 1000; /* Ensure the header is above other content */
 }
@@ -30,6 +30,12 @@ h1 {
 #header h1 {
     font-size: 48px;
     margin: 0;
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: flex-end; 
 }
 
 section {
@@ -236,7 +242,6 @@ form h1 {
 
 .form-group {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 64px;
     margin-top: 32px;
     margin-bottom: 100px;
