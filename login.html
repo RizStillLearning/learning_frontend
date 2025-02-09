@@ -25,6 +25,7 @@
             height: 100vh;
             margin: 0;
         }
+
         form {
             width: 30%;
             border: 3px solid rgb(255, 195, 82);
@@ -66,22 +67,21 @@
         }
 
         .login-btn {
+            text-align: center;
+            text-decoration: none;
             font-size: 24px;
-            width: 100%;
             padding: 12px 24px;
             margin-top: 100px;
             background-color: rgb(255, 195, 82);
             border: none;
             color: white;
+            display: block;
         }
 
-        button:hover {
-            cursor: pointer;
-        }
-
-        button:active {
+        .login-btn:active {
             text-decoration: underline;
         }
+
     </style>
     <title>Login</title>
 </head>
@@ -98,7 +98,7 @@
                 <label for="password">Password</label>
             </div>
         </div>
-        <button class="login-btn">Login</button>
+        <a class="login-btn" href="index.html">Login</a>
     </form>
 </body>
 </html>
