@@ -13,6 +13,10 @@ h1 {
     font-size: 36px;
 }
 
+img, iframe {
+    width: 100%;
+}
+
 #header, #footer {
     padding: 16px 128px;
     box-sizing: border-box;
@@ -308,4 +312,53 @@ form input::placeholder {
 
 #footer p {
     color: white;
+}
+
+@media only screen and (max-width: 1758px) {
+    #header, #footer {
+        padding: 16px 32px;
+    }
+
+    section {
+        padding: 64px 32px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    .service-contents {
+        flex-direction: column;
+        row-gap: 128px;
+        padding: 0 64px;
+    }
+
+    .service-contents > div {
+        width: 100%;
+    }
+
+    .contact-contents {
+        flex-direction: column;
+        row-gap: 128px;
+        padding: 0 64px;
+    }
+
+    .contact-contents > div {
+        width: 100%;
+    }
 }
