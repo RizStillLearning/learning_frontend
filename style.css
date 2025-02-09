@@ -1,6 +1,7 @@
 * {
     font-family: "Montserrat";
     animation: bounceIn 1s;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -81,10 +82,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 16px;
+    column-gap: 128px;
 }
 
-#landing > div {
+#landing > div, #landing > img {
     width: 50%;
 }
 
@@ -146,17 +147,18 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 16px;
+    column-gap: 128px;
 }
 
-#about > div {
+#about > div, #about > img {
     width: 50%;
 }
 
 .about-contents {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    justify-content: space-evenly;
     margin-top: 72px;
 }
 
@@ -176,6 +178,10 @@ button:hover {
 #service {
     display: flex;
     flex-direction: column;
+}
+
+#service > div {
+    width: 100%;
 }
 
 .service-header {
@@ -233,8 +239,13 @@ button:hover {
 .contact-contents {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    column-gap: 128px;
+    justify-content: space-between;
     margin-top: 72px;
+}
+
+.contact-contents > div, .contact-contents > form {
+    width: 50%;
 }
 
 .input-name {
@@ -314,6 +325,39 @@ form input::placeholder {
     color: white;
 }
 
+.social-icon {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+}
+
+@media only screen and (max-width: 1186px) {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-contents {
+        flex-direction: column;
+        row-gap: 128px;
+        padding: 0 64px;
+    }
+
+    .service-contents > div {
+        width: 100%;
+    }
+
+    .contact-contents {
+        flex-direction: column;
+        row-gap: 128px;
+        padding: 0 64px;
+    }
+
+    .contact-contents > div, .contact-contents > form {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 1758px) {
     #header, #footer {
         padding: 16px 32px;
@@ -339,26 +383,6 @@ form input::placeholder {
     }
 
     #about > div {
-        width: 100%;
-    }
-
-    .service-contents {
-        flex-direction: column;
-        row-gap: 128px;
-        padding: 0 64px;
-    }
-
-    .service-contents > div {
-        width: 100%;
-    }
-
-    .contact-contents {
-        flex-direction: column;
-        row-gap: 128px;
-        padding: 0 64px;
-    }
-
-    .contact-contents > div {
         width: 100%;
     }
 }
