@@ -1,5 +1,6 @@
 * {
     font-family: "Montserrat";
+    animation: bounceIn 1s;
 }
 
 html, body {
@@ -27,9 +28,40 @@ h1 {
     z-index: 1000; /* Ensure the header is above other content */
 }
 
+@keyframes bounceIn {
+    from {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    to {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes coloring {
+    from {
+        filter: grayscale(1);
+    }
+    to {
+        filter: grayscale(0);
+    }
+}
+
 #header h1 {
     font-size: 48px;
     margin: 0;
+    /* animation: flash 1s infinite; */
+    animation: bounceIn 1s;
 }
 
 section {
@@ -178,16 +210,16 @@ button:hover {
 }
 
 .service-items:hover {
-    transform: scale(1.25);
-}
-
-.service-items:hover img {
-    filter: grayscale(0);
+    animation: zoomIn 0.5s;
 }
 
 .service-items img {
     height: 100%;
     filter: grayscale(1);
+}
+
+.service-items:hover img {
+    animation: coloring 0.5s;
 }
 
 .service-items p, .service-items h2 {
