@@ -14,6 +14,7 @@ h1 {
 
 #header, #footer {
     padding: 16px 128px;
+    box-sizing: border-box;
 }
 
 #header {
@@ -23,13 +24,11 @@ h1 {
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
 #header h1 {
     font-size: 48px;
-}
-
-#header h1 {
     margin: 0;
 }
 
@@ -73,17 +72,17 @@ a {
 }
 
 .menu li {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .menu li a {
-    background: linear-gradient(to bottom, rgb(255, 195, 82), rgb(136, 102, 0));
-    color: white;
+    color: rgb(255, 195, 82);
     padding: 5px 20px; 
 }
 
 .menu li a:hover {
-    background: #3e2600;
+    color: white;
+    background: rgb(255, 195, 82);
 }
 
 a:active, button:active {
@@ -92,16 +91,6 @@ a:active, button:active {
 
 button:hover {
     cursor: pointer;
-}
-
-.menu li:first-child a {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.menu li:last-child a {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 .btn {
@@ -188,6 +177,14 @@ button:hover {
     box-shadow: 0 4px 10px #979797;
 }
 
+.service-items:hover {
+    transform: scale(1.25);
+}
+
+.service-items:hover img {
+    filter: grayscale(0);
+}
+
 .service-items img {
     height: 100%;
     filter: grayscale(1);
@@ -237,7 +234,6 @@ form h1 {
 
 .form-group {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 64px;
     margin-top: 32px;
     margin-bottom: 100px;
