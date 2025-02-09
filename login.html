@@ -16,17 +16,27 @@
             margin-bottom: 64px;
         }
 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: fit-content;
             border: 3px solid rgb(255, 195, 82);
+            padding: 20px;
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0 64px;
         }
 
         .input {
@@ -49,11 +59,20 @@
 
         .login-btn {
             font-size: 24px;
-            width: 100%;
+            width: 50%;
+            padding: 12px 0;
             margin: 36px 20px;
             background-color: rgb(255, 195, 82);
             border: none;
             color: white;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        button:active {
+            text-decoration: underline;
         }
     </style>
     <title>Login</title>
